@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/$RECYCLE.BIN": true,
+        "**/System Volume Information": true,
+        "*.inf": true,
+        "*.ini": true
+    },
+    "hide-files.files": []
+}
