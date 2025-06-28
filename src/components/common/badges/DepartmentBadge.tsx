@@ -21,11 +21,11 @@ export default function DepartmentBadge({
     <Badge
       variant="secondary"
       className={cn(
-        department === Department.CM && "bg-violet-200 text-violet-900",
-        department === Department.TT && "bg-yellow-200 text-yellow-900",
-        department === Department.DN && "bg-blue-200 text-blue-900",
-        department === Department.VH && "bg-green-200 text-green-900",
-        department === Department.ND && "bg-orange-200 text-orange-900"
+        department === Department.CM && "bg-blue text-blue-fg",
+        department === Department.TT && "bg-green text-green-fg",
+        department === Department.DN && "bg-maroon text-maroon-fg",
+        department === Department.VH && "bg-peach text-peach-fg",
+        department === Department.ND && "bg-pink text-pink-fg"
       )}
     >
       {department ? iconMap[department] : ""}

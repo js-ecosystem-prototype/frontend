@@ -2,7 +2,7 @@ import { Department, Gender, User } from "@/generated/prisma";
 
 export type ViewMode = "LIST" | "TILE" | "THUMBNAIL";
 
-export const res: { users: User[] } = {
+export const userData: { users: User[] } = {
   users: [
     {
       email: "alice@example.com",
