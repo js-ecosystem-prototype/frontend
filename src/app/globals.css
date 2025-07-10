@@ -87,6 +87,8 @@ html {
   --destructive: var(--red);
   --destructive-foreground: var(--ground);
 
+  --selection: var(--primary);
+
   /* === Colors by component === */
   --card: var(--surface-0);
   --card-foreground: var(--text);
@@ -200,13 +202,18 @@ html[data-theme="light"] {
   --color-surface-1: var(--surface-1);
   --color-surface-0: var(--surface-0);
 
-  /* --color-ground: var(--ground); */
+  --color-ground: var(--ground);
   --color-under-0: var(--under-0);
   --color-under-1: var(--under-1);
 
   /* === Context color === */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
 
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
@@ -223,12 +230,40 @@ html[data-theme="light"] {
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
 
+  --color-selection: var(--selection);
+
   /* === Component colors === */
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
 
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
+
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* === Fonts === */
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+
+  /* === Radius === */
 
   --color-border: var(--border);
   --color-ring: var(--ring);
@@ -269,13 +304,30 @@ html[data-theme="light"] {
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
+
+  /* === Shadows === */
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
 }
 
 @layer base {
   * {
+    /* Border color, outline color 50% for all element */
     @apply border-border outline-ring/50;
+
+    /* Selection bg 30% for all element */
+    @apply selection:bg-selection/30;
   }
+
   body {
+    @apply bg-background text-text;
+    @apply font-sans;
     @apply bg-background text-text;
     @apply font-sans;
   }
